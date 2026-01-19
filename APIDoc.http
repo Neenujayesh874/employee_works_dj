@@ -1,0 +1,23 @@
+#schema->Employee
+#fields->name,department,salary,location,experience,age,email,phone
+
+###
+#api call for listing all employees
+GET http://127.0.0.1:8000/employees/
+Accept: application/json
+
+###
+#api call for adding an employee
+POST http://127.0.0.1:8000/employees/
+Content-Type: application/json
+
+{
+    name:"Vijay"
+    department:"IT",
+    salary:36000,
+    location:"Kochi",
+    experience:2,
+    age:28,
+    email:"vijay@gmail.com",
+    phone:"27879"
+}
