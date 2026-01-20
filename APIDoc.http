@@ -1,10 +1,12 @@
 #schema->Employee
 #fields->name,department,salary,location,experience,age,email,phone
 
+
 ###
 #api call for listing all employees
 GET http://127.0.0.1:8000/employees/
 Accept: application/json
+
 
 ###
 #api call for adding an employee
@@ -12,12 +14,35 @@ POST http://127.0.0.1:8000/employees/
 Content-Type: application/json
 
 {
-    "name":"Vijay",
+    "name":"Vimala",
     "department":"IT",
-    "salary":36000,
+    "salary":35000,
     "location":"Kochi",
-    "experience":2,
-    "age":28,
-    "email":"vijay@gmail.com",
-    "phone":"27879"
+    "experience":1,
+    "age":24,
+    "email":"vimala@gmail.com",
+    "phone":"466281"
 }
+
+
+###
+#api call for retrieving an employee
+GET http://127.0.0.1:8000/employees/1/
+Accept: application/json
+
+
+###
+#api call for updating an employee
+PUT http://127.0.0.1:8000/employees/2/
+Content-Type: application/json
+
+{
+    "salary":46000,
+    "age":25,
+    "email":"aravindk@gmail.com"
+}
+
+
+###
+#api call for deleting an employee
+DELETE http://127.0.0.1:8000/employees/1/
